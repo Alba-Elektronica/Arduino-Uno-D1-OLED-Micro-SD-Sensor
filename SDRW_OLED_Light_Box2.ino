@@ -1,48 +1,32 @@
-/*
- *   
- *   The MIT License (MIT)
- *
- * Copyright (c) 2020 by Alba Elektronica
- *
+//Alba Elektronica @ 2020
 
- * 
-  SD card read/write + OLED + Photosensitive sensor on an Arduino Uno board
+//  SD card read/write + OLED + Photosensitive sensor on an Arduino Uno board
 
-  This example shows how to read from the SD card file on OLED / write on the SD card the data from a sensor 
+//  This example shows how to read from the SD card file on OLED / write on the SD card the data from a sensor 
   
-  The circuit:
-   --> SD module attached to SPI bus as follows:
+//  The circuit:
+//   --> SD module attached to SPI bus as follows:
    
- ** GND - GND 
- ** VCC - +5V 
- ** MOSI - pin 11
- ** MISO - pin 12
- ** CLK - pin 13
- ** CS - pin 4 (for MKRZero SD: SDCARD_SS_PIN)
+// ** GND - GND 
+// ** VCC - +5V 
+// ** MOSI - pin 11
+// ** MISO - pin 12
+// ** CLK - pin 13
+// ** CS - pin 4 (for MKRZero SD: SDCARD_SS_PIN)
 
-  --> Initialize the OLED display 
+//  --> Initialize the OLED display 
 
- ** GND - GND 
- ** VCC - +3.3V 
- ** D3 -> SDA
- ** D5 -> SCL
+// ** GND - GND 
+// ** VCC - +3.3V 
+// ** D3 -> SDA
+// ** D5 -> SCL
 
-  --> Initialize the KY sensor
+//  --> Initialize the KY sensor
 
-** S - A5  
-** + - +5V
-** - - GND
+//** S - A5  
+//** + - +5V
+//** - - GND
   
-
-  contributors: David A. Mellis, Tom Igoe, (2010 - MicroSd adapter)
-  Daniel Eichhorn, Fabrice Weinberg (ThingPulse), (2018 - SSD1306 Drawing Demo) 
-  David Cuartielles, Tom Igoe (2011 - Analog input example) 
-  Madalina Drugan (Alba Elektronica) (2020 - current file)
-
-  This example code is in the public domain.
-
-*/
-
 #include <SPI.h>
 #include <SD.h>
 
